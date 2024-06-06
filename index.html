@@ -6,20 +6,26 @@
     <title>Apex Luxury Rentals</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
         header {
-            background: #333;
+            background: #000;
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         nav ul li {
             display: inline;
@@ -28,25 +34,77 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('https://example.com/your-image.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5rem;
         }
         .container {
             width: 80%;
             margin: auto;
+            padding: 100px 0 50px;
             overflow: hidden;
         }
         .content {
             padding: 20px;
             background: #fff;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .content h2 {
+            color: #000;
+        }
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .content ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .content ul li:last-child {
+            border: none;
+        }
+        .contact-info {
+            background: #f8f8f8;
+            padding: 20px;
             margin-top: 20px;
+            border-left: 4px solid #000;
         }
         footer {
-            background: #333;
+            background: #000;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -65,12 +123,14 @@
         </div>
     </header>
 
-    <div class="container">
-        <section id="home" class="content">
-            <h2>Welcome to Apex Luxury Rentals</h2>
-            <p>Your premier destination for luxury property rentals in Morocco. Explore our exclusive listings and find your perfect home away from home.</p>
-        </section>
+    <section id="home" class="hero">
+        <div>
+            <h1>Welcome to Apex Luxury Rentals</h1>
+            <p>Your premier destination for luxury property rentals in Morocco</p>
+        </div>
+    </section>
 
+    <div class="container">
         <section id="about" class="content">
             <h2>About Us</h2>
             <p>At Apex Luxury Rentals, we specialize in offering the finest properties for rent in Morocco. Our mission is to provide unparalleled service and exceptional rental experiences for our clients.</p>
@@ -86,7 +146,7 @@
             </ul>
         </section>
 
-        <section id="contact" class="content">
+        <section id="contact" class="content contact-info">
             <h2>Contact Us</h2>
             <p>Have questions or need assistance? Reach out to us and we'll be happy to help!</p>
             <p>Email: info@apexluxuryrentals.com</p>
