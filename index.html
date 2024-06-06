@@ -116,4 +116,131 @@
             cursor: pointer;
         }
         footer {
-            back
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Swiper styles */
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+            height: 300px; /* Adjusted height */
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Apex Luxury Rentals</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div>
+            <h1>Welcome to Apex Luxury Rentals</h1>
+            <p>Your premier destination for luxury property rentals in Morocco</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="about" class="content">
+            <h2>About Us</h2>
+            <p>At Apex Luxury Rentals, we specialize in offering the finest properties for rent in Morocco. Our mission is to provide unparalleled service and exceptional rental experiences for our clients.</p>
+        </section>
+
+        <section id="services" class="content">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <img src="https://example.com/luxury-rentals-icon.png" alt="Luxury Rentals">
+                    <h3>Luxury Rentals</h3>
+                    <p>Exclusive luxury properties available for rent.</p>
+                </div>
+                <div class="service">
+                    <img src="https://example.com/concierge-icon.png" alt="Concierge Services">
+                    <h3>Concierge Services</h3>
+                    <p>Personalized concierge services to meet your needs.</p>
+                </div>
+                <div class="service">
+                    <img src="https://example.com/property-management-icon.png" alt="Property Management">
+                    <h3>Property Management</h3>
+                    <p>Professional management for your rental properties.</p>
+                </div>
+                <div class="service">
+                    <img src="https://example.com/travel-icon.png" alt="Travel Arrangements">
+                    <h3>Travel Arrangements</h3>
+                    <p>Comprehensive travel and transportation arrangements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Swiper -->
+        <section id="carousel" class="content">
+            <h2>Gallery</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(https://th.bing.com/th/id/OIP.O9nIGE4tMlRXgNs7GmFFLgHaE8?rs=1&pid=ImgDetMain)"></div>
+                    <div class="swiper-slide" style="background-image:url(https://example.com/your-image-2.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(https://example.com/your-image-3.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(https://example.com/your-image-4.jpg)"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="content">
+            <h2>Contact Us</h2>
+            <p>Have questions or need assistance? Reach out to us and we'll be happy to help!</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Apex Luxury Rentals. All rights reserved.</p>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
